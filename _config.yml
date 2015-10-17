@@ -74,7 +74,6 @@ savefiles:
   - CNAME
   - robots.txt
   - .nojekyll
-  - readme.md
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
