@@ -1,7 +1,7 @@
 
 
-title: Move windows between desktops on MacOSX
-comments: false
+title: Quicktip - Move windows between desktops on MacOSX
+comments: true
 date: 2015-10-17
 categories:
 - software
