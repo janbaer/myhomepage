@@ -56,7 +56,7 @@
         font-weight: 300;
         overflow:    hidden;
         word-break:  break-word;
-        @include prefix('word-break', 'break-all', 'ms moz');
+        @include prefix('word-break', 'break-word', 'ms moz');
         @include prefix('hypens', 'auto', 'webkit moz');
 
         img {

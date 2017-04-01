@@ -35,6 +35,10 @@ sidebar:
             title: global.home
             url: /
             icon: home
+        projects:
+            title: MyProjects
+            url: /projects.html
+            icon: book
         categories:
             title: global.categories
             url: /all-categories
@@ -158,7 +162,7 @@ tag_pagination: true
 
 # Integrated services
 # Your Disqus shortname
-disqus_shortname:
+disqus_shortname: janbaer1971
 # Your Google analystics web property ID : UA-XXXXX-X
 google_analytics_id: UA-6811781-1
 # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
