@@ -6,5 +6,8 @@ The website is using the powerful blog framework [hexo.io](https://hexo.io)
 To deploy a new blog entry you've to execute the following command.
 
 ```
-hexo generate && hexo deploy
+hexo deploy -g
 ```
+
+Since the login with my credentials failed last time, I just went into the hidden directory
+**./deploy_git** and entered **git push** manually.
