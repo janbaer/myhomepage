@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Homepage Jan Baer">
+    <title>From C# to Python - Homepage Jan Baer</title>
+    <meta name="author" content="Jan Baer">
+    
+    
+        <link rel="alternative" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="Last week I did my first steps with Python) and I was really suprised about this programming language that has such a long history. It provides features that I wouldn’t expect. To dive deeper into the">
+<meta name="keywords" content="linq,c#,python">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="From C# to Python">
+<meta property="og:url" content="https://www.janbaer.de/2015/10/17/2015-10-17-From-Csharp-to-Python/index.html">
+<meta property="og:site_name" content="Homepage Jan Baer">
+<meta property="og:description" content="Last week I did my first steps with Python) and I was really suprised about this programming language that has such a long history. It provides features that I wouldn’t expect. To dive deeper into the">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-04-01T12:05:18.571Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="From C# to Python">
+<meta name="twitter:description" content="Last week I did my first steps with Python) and I was really suprised about this programming language that has such a long history. It provides features that I wouldn’t expect. To dive deeper into the">
+<meta name="twitter:creator" content="@reabnaj">
+    
+        <meta rel="publisher" content="https://plus.google.com/+janbaer"/>
+    
+    
+    
+        <meta property="og:image" content="/assets/images/https:/avatars2.githubusercontent.com/u/528331?v=3&s=140"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-6811781-1']);
+        _gaq.push (['_gat._anonymizeIp']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="3">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Homepage Jan Baer</a>
+    </h1>
+    
+        
+            <a class="header-right-picture " href="#about">
+        
+        
+            <img class="header-picture" src="https://avatars2.githubusercontent.com/u/528331?v=3&amp;s=140">
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="3">
+    
+        <div class="sidebar-profile">
+            <a href="/#about">
+                    <img class="sidebar-profile-picture" src="https://avatars2.githubusercontent.com/u/528331?v=3&amp;s=140">
+            </a>
+            <span class="sidebar-profile-name">Jan Baer</span>
+        </div>
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a class="sidebar-button-link " href="/ ">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a class="sidebar-button-link " href="/projects.html">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-book"></i>
+                    <span class="sidebar-button-desc">MyProjects</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a class="sidebar-button-link " href="/all-categories">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a class="sidebar-button-link " href="/all-tags">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a class="sidebar-button-link " href="/all-archives">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a class="sidebar-button-link " href="#about">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a class="sidebar-button-link " href="https://github.com/janbaer" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                    <span class="sidebar-button-desc">GitHub</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a class="sidebar-button-link " href="https://twitter.com/reabnaj" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                    <span class="sidebar-button-desc">Twitter</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a class="sidebar-button-link " href="/atom.xml">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="3"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            From C# to Python
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" content="Sat Oct 17 2015 00:00:00 GMT+0200">
+	
+		    Oct 17, 2015
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/development/">development</a>
+
+
+    
+</div>
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>Last week I did my first steps with <a href="https://de.wikipedia.org/wiki/Python_(Programmiersprache" target="_blank" rel="external">Python</a>) and I was really suprised about this programming language that has such a long history.</p>
+<p>It provides features that I wouldn’t expect. To dive deeper into the language I solved a <strong>Kata</strong>,<br>what I mostly do when learning a new programming language. This time I choosen the <a href="http://osherove.com/tdd-kata-1/" target="_blank" rel="external">StringCalculator kata</a> from Roy Osherove. You can find the source code on my <a href="https://github.com/janbaer/Katas/tree/master/Kata.StringCalculator.Python" target="_blank" rel="external">github</a> page.</p>
+<p>One of the nice features I found was <strong>list comprehensions</strong> feature.</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[number for number in [<span class="number">1</span>, <span class="number">2</span>, <span class="number">1000</span>, <span class="number">1001</span>] if number &lt;= <span class="number">1000</span>]</div><div class="line"># returns [<span class="number">1</span>, <span class="number">2</span>, <span class="number">1000</span>]</div></pre></td></tr></table></figure>
+<p>Another nice feature was the built-in <strong>any</strong> function. It does the same like the same linq function from C#. It returns true when any element of the iterable returns true.</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">any</span>(<span class="built_in">number</span> &lt; <span class="number">0</span> <span class="keyword">for</span> <span class="built_in">number</span> <span class="keyword">in</span> [<span class="number">-1</span>,<span class="number">2</span>,<span class="number">3</span>])</div><div class="line"><span class="comment"># returns true</span></div></pre></td></tr></table></figure>
+<p>The same is for the <strong>filter</strong> function. It takes a function as first parameter that returns a boolean and returns all elements from the given list whith those elements for which the function returns true.</p>
+<p>At least I used a feature that ES6 also provides, the <strong>Destructuring assignment</strong>. So in the Kata I used a regular expression to split the definition of delimiter from the list of numbers.</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">match</span> = myRegex.<span class="built_in">search</span>(<span class="built_in">input</span>)</div><div class="line"><span class="keyword">if</span> <span class="keyword">match</span>:</div><div class="line">  delimiter, <span class="built_in">input</span> = <span class="keyword">match</span>.groups()</div><div class="line"></div><div class="line"><span class="keyword">return</span> delimiter, <span class="built_in">input</span></div></pre></td></tr></table></figure>
+<p>The regex returned in a positive case two groups. Both groups I could directly assign to the variables <em>delimiter</em> and <em>input</em> and also return this variables as result of the function. In this case both variables will be automatically packed as a tuple and in the calling function unpacked and assigned to two another variables, very nice…</p>
+<p>So I’m just at the beginning of journey through the features of python and I’ll post here more about my experiences…</p>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/c/">c#</a> <a class="tag tag--primary tag--small t-link" href="/tags/linq/">linq</a> <a class="tag tag--primary tag--small t-link" href="/tags/python/">python</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/10/17/2015-10-17_QuickTip_MoveWindowsBetweetenDesktopsOnMacOSX/" data-tooltip="Quicktip - Move windows between desktops on MacOSX">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2013/12/08/2013-12-08-find-out-which-process-uses-my-port/" data-tooltip="Find out which process uses my port">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.janbaer.de/2015/10/17/2015-10-17-From-Csharp-to-Python/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.janbaer.de/2015/10/17/2015-10-17-From-Csharp-to-Python/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.janbaer.de/2015/10/17/2015-10-17-From-Csharp-to-Python/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 Jan Baer. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="3">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/10/17/2015-10-17_QuickTip_MoveWindowsBetweetenDesktopsOnMacOSX/" data-tooltip="Quicktip - Move windows between desktops on MacOSX">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2013/12/08/2013-12-08-find-out-which-process-uses-my-port/" data-tooltip="Find out which process uses my port">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.janbaer.de/2015/10/17/2015-10-17-From-Csharp-to-Python/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.janbaer.de/2015/10/17/2015-10-17-From-Csharp-to-Python/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.janbaer.de/2015/10/17/2015-10-17-From-Csharp-to-Python/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="3">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://www.janbaer.de/2015/10/17/2015-10-17-From-Csharp-to-Python/">
+                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.janbaer.de/2015/10/17/2015-10-17-From-Csharp-to-Python/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://www.janbaer.de/2015/10/17/2015-10-17-From-Csharp-to-Python/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+            
+        </div>
+        <!-- Define author's picture -->
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="https://avatars2.githubusercontent.com/u/528331?v=3&amp;s=140">
+        
+            <h4 id="about-card-name">Jan Baer</h4>
+        
+            <h5 id="about-card-bio"><p>I’m a passionated Softwaredeveloper from Munich.</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>Softwaredeveloper</p>
+
+            </h5>
+        
+        
+            <h5 id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br>
+                Germany
+            </h5>
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script.min.js"></script>
+<!--SCRIPTS END-->
+
+
+
+</html>
