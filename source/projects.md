@@ -19,7 +19,7 @@ But enough words about the past, let me write about the projects I developed in 
 
 ## MDWiki
 
-The first project is **MDWiki** a web application for collecting information in form of a personal wiki. It's reachable over [www.mdwiki.net](http://www.mdwiki.net). To use it, you need a Github account. The data will be stored in a git repository that you've created before under your username there. The software is using Node.js in the background and Angular.js 1 for the frontend. Since the data will be stored on Github in the well known Markdown format, your data are also readable directly on the Github repository web page.
+The first project is **MDWiki** a web application for collecting information in form of a personal wiki. It's reachable over [mdwiki.janbaer.de](https://mdwiki.janbaer.de). To use it, you need a Github account. The data will be stored in a git repository that you've created before under your username there. The software is using Node.js in the background and Angular.js 1 for the frontend. Since the data will be stored on Github in the well known Markdown format, your data are also readable directly on the Github repository web page.
 
 ![MDWiki](images/mdwiki.png)
 
@@ -34,9 +34,9 @@ The second project I want to present here is **HowCanI** my latest public projec
 
 This webapp is written with using Angular 2 and it's running as a Github webpage. Like **MDWiki** it's using Github for storing the data. The questions you asked and answered yourself will be stored as issues in your own Github repository. To use it, you just have the authorize HowCanI with your Github account to use your repository.
 
-The website is reachable under [www.howcani.eu](https://www.howcani.eu).
+The website is reachable under [howcani.janbaer.de](https://howcani.janbaer.de).
 
-Both projects I use intensively for myself, as you can see [here](https://www.howcani.eu/#/questions/janbaer/howcani), so this web applications will be maintained for the next years and in the case of the cases, your data are always stored and reachable on Github under your personal account.
+Both projects I use intensively for myself, as you can see [here](https://howcani.janbaer.de/#/questions/janbaer/howcani), so this web applications will be maintained for the next years and in the case of the cases, your data are always stored and reachable on Github under your personal account.
 
 ---
 

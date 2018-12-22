@@ -51,12 +51,6 @@ sidebar:
             title: global.archives
             url: /all-archives
             icon: archive
-        #search:
-        #    title: global.search
-        #    url: /#search
-        #    icon: search
-        #    # `st-search-show-outputs` classes are used to open swiftype search window
-        #    class: st-search-show-outputs
         about:
             title: global.about
             url: /#about
@@ -70,18 +64,6 @@ sidebar:
             title: global.twitter
             url: https://twitter.com/reabnaj
             icon: twitter
-        google_plus:
-            title: global.google_plus
-            url: https://plus.google.com/+janbaer
-            icon: google-plus
-        xing:
-            title: Xing
-            url: https://www.xing.com/profile/Jan_Baer.db7203
-            icon: xing
-        #mail:
-        #    title: global.mail
-        #    url: mailto:jan@janbaer.de
-        #    icon: envelope-o
     rss:
         rss:
             title: global.rss
