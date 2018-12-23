@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "generate": "hexo generate -g"
+    "generate": "hexo generate",
+    "new": "hexo new",
+    "deploy": "yarn generate && ./deploy.sh",
+    "serve": "live-server --no-browser public"
   },
   "hexo": {
     "version": "3.8.0"
