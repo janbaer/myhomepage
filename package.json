@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "generate": "hexo generate",
+    "watch": "hexo generate -w",
     "new": "hexo new",
     "deploy": "yarn generate && ./deploy.sh",
     "serve": "live-server --no-browser public"
