@@ -6,23 +6,24 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Homepage Jan Baer">
-    <title>Reject domains for personal projects - Homepage Jan Baer</title>
+    <title>MDWiki rewrite - Homepage Jan Baer</title>
     <meta name="author" content="Jan Baer">
     
     
         <link rel="alternative" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="Because of personal reasons I had to reject to both domain names I used for my personal projectsmdwiki.net and howcani.eu. So from November this years, will no longer be reachable. But I’ll continue w">
+    <meta name="description" content="A short article about the rewrite of MDWiki">
+<meta name="keywords" content="develop">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Reject domains for personal projects">
-<meta property="og:url" content="https://www.janbaer.de/2018/10/07/2017-10-07_reject_domains/index.html">
+<meta property="og:title" content="MDWiki rewrite">
+<meta property="og:url" content="https://www.janbaer.de/2018/12/22/2018-12-22-mdwiki_rewrite/index.html">
 <meta property="og:site_name" content="Homepage Jan Baer">
-<meta property="og:description" content="Because of personal reasons I had to reject to both domain names I used for my personal projectsmdwiki.net and howcani.eu. So from November this years, will no longer be reachable. But I’ll continue w">
+<meta property="og:description" content="A short article about the rewrite of MDWiki">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-07T10:21:54.296Z">
+<meta property="og:updated_time" content="2018-12-23T07:50:36.125Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Reject domains for personal projects">
-<meta name="twitter:description" content="Because of personal reasons I had to reject to both domain names I used for my personal projectsmdwiki.net and howcani.eu. So from November this years, will no longer be reachable. But I’ll continue w">
+<meta name="twitter:title" content="MDWiki rewrite">
+<meta name="twitter:description" content="A short article about the rewrite of MDWiki">
 <meta name="twitter:creator" content="@reabnaj">
     
         <meta rel="publisher" content="https://plus.google.com/+janbaer"/>
@@ -204,42 +205,48 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Reject domains for personal projects
+            MDWiki rewrite
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" content="Sun Oct 07 2018 00:00:00 GMT+0200">
+    <time itemprop="datePublished" content="Sat Dec 22 2018 00:00:00 GMT+0100">
 	
-		    Oct 07, 2018
+		    Dec 22, 2018
     	
     </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/software/">software</a>
-
-
     
 </div>
 </div>
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>Because of personal reasons I had to reject to both domain names I used for my personal projects<br><strong>mdwiki.net</strong> and <strong>howcani.eu</strong>. So from November this years, will no longer be reachable.</p>
-<p>But I’ll continue with the hosting for both projects as subdomains for the domain I use for my self since many years. So MDWiki will be reachable under <a href="https://mdwiki.janbaer.de" target="_blank" rel="noopener">mdwiki.janbaer.de</a> and HowCanI will be hosted<br>under <a href="https://howcani.janbaer.de" target="_blank" rel="noopener">howcani.janbaer.de</a>.</p>
-<p>I’ll continue both projects as my personal projects, since I used it for myself for some years. But<br>it’s still possible, to connect to your own GitHub repository.</p>
+            <p>As I wrote in my previous blog entry before a while I decided to give up the domains for my personal projects and let it run as subdomains under my personal domain janbaer.de.</p>
+<p>Before a while I realized, how easy it is to host a PWA on Github as a <strong>gh-page</strong> and thanks to Github and with the help of <strong>Let’s encrypt</strong> your PWA can also run over HTTPs which gives you more security but also the ability to use ServiceWorkers. The only constraint you have to live with is, that you’ll have no serve backend to use Node.js for example. So there’ll be also no server side rendering.</p>
+<p>But that was fine for my projects and that’s why I decided to rewrite MDWiki completely for the  third time. In the first version I was using Angular 1 with Node.js on the backend site. After 3 years I wanted to rewrite it and I decided to use Next.js wich is using React.js and Node.js in the backend.</p>
+<p>So for the third version I decided to not make a complete rewrite and just to make some slightly changes to be able to use some code from the second version. That’s why I don’t wanted to leave the React.js world completely. But I wanted to replace it with <a href="https://preactjs.com/" target="_blank" rel="noopener">Preact.js</a> which has a much smaller footprint than React.js. And because of there’s no server side code, I completely dropped Next.js.</p>
+<p>But instead of using Webpack directly for the module bundling I decided to use <a href="https://parceljs.org/" target="_blank" rel="noopener">Parcel.js</a> which is another more lighweight module bundler.</p>
+<p>An because of my experience of the second version of MDWiki and also my daily work with React.js it took me less than two months to rewrite MDWiki with the same functionality as from the second version and let it run under <a href="https://mdwiki.janbaer.de" target="_blank" rel="noopener">mdwiki.janbaer.de</a>. When I started with the project I wanted to use a small CSS framework and I started with <a href="https://getuikit.com/docs/introduction" target="_blank" rel="noopener">UIKit</a>. But then I realized that I don’t used so much from the framework and I could write it on my own.</p>
+<p>Another feature I also used, is a ServiceWorker, to be able to also be runnable offline. ServiceWorker you can only use when your website is served via https.</p>
+<p>The result is now a very lightweight and very easy deployable PWA, that has just a few dependencies.</p>
 
             
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
         
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/develop/">develop</a>
+
+            </div>
+        
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/22/2018-12-22-mdwiki_rewrite/" data-tooltip="MDWiki rewrite">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -247,7 +254,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/04/01/2017-04-01-my-projects/" data-tooltip="My Projects">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/10/07/2017-10-07_reject_domains/" data-tooltip="Reject domains for personal projects">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -262,20 +269,26 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.janbaer.de/2018/10/07/2017-10-07_reject_domains/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.janbaer.de/2018/12/22/2018-12-22-mdwiki_rewrite/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.janbaer.de/2018/10/07/2017-10-07_reject_domains/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.janbaer.de/2018/12/22/2018-12-22-mdwiki_rewrite/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.janbaer.de/2018/10/07/2017-10-07_reject_domains/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.janbaer.de/2018/12/22/2018-12-22-mdwiki_rewrite/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
         
         <li class="post-action">
             
@@ -288,6 +301,10 @@
 </div>
 
 
+        
+            <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
         
     </div>
 </article>
@@ -308,7 +325,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/22/2018-12-22-mdwiki_rewrite/" data-tooltip="MDWiki rewrite">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -316,7 +333,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/04/01/2017-04-01-my-projects/" data-tooltip="My Projects">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/10/07/2017-10-07_reject_domains/" data-tooltip="Reject domains for personal projects">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -331,20 +348,26 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.janbaer.de/2018/10/07/2017-10-07_reject_domains/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.janbaer.de/2018/12/22/2018-12-22-mdwiki_rewrite/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.janbaer.de/2018/10/07/2017-10-07_reject_domains/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.janbaer.de/2018/12/22/2018-12-22-mdwiki_rewrite/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.janbaer.de/2018/10/07/2017-10-07_reject_domains/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.janbaer.de/2018/12/22/2018-12-22-mdwiki_rewrite/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
         
         <li class="post-action">
             
@@ -361,17 +384,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="3">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://www.janbaer.de/2018/10/07/2017-10-07_reject_domains/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://www.janbaer.de/2018/12/22/2018-12-22-mdwiki_rewrite/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.janbaer.de/2018/10/07/2017-10-07_reject_domains/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.janbaer.de/2018/12/22/2018-12-22-mdwiki_rewrite/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://www.janbaer.de/2018/10/07/2017-10-07_reject_domains/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://www.janbaer.de/2018/12/22/2018-12-22-mdwiki_rewrite/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
@@ -424,6 +447,17 @@
     <!--SCRIPTS-->
 <script src="/assets/js/script.min.js"></script>
 <!--SCRIPTS END-->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'janbaer1971';
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
 
 
 

@@ -227,8 +227,8 @@
                     <div class="postShorten-content" itemprop="articleBody">
                         <p>In my current project I have got some .csf files with the requirement to import these files<br>to my project as base data to use it as inmemory repository.</p>
 <p>The best solution was these single line of code in powershell.</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Get-Content</span> -path <span class="variable">$inputFile</span> | <span class="built_in">ConvertFrom-Csv</span> -Delimiter <span class="string">';'</span> | <span class="built_in">ConvertTo-Json</span> | <span class="built_in">Out-File</span> <span class="variable">$outputFile</span></div></pre></td></tr></table></figure>
-<p>You can download the complete powershell script from my <a href="https://gist.github.com/janbaer/5045798" target="_blank" rel="external">gist repository</a> at github.</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Content</span> -path <span class="variable">$inputFile</span> | <span class="built_in">ConvertFrom-Csv</span> -Delimiter <span class="string">';'</span> | <span class="built_in">ConvertTo-Json</span> | <span class="built_in">Out-File</span> <span class="variable">$outputFile</span></span><br></pre></td></tr></table></figure>
+<p>You can download the complete powershell script from my <a href="https://gist.github.com/janbaer/5045798" target="_blank" rel="noopener">gist repository</a> at github.</p>
 
                         
                         

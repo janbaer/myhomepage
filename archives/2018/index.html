@@ -204,6 +204,50 @@
                 <div class="postShorten-header">
                     <h1 class="postShorten-title" itemprop="headline">
                         
+                                <a class="link-unstyled" href="/2018/12/22/2018-12-22-mdwiki_rewrite/">MDWiki rewrite</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Sat Dec 22 2018 00:00:00 GMT+0100">
+	
+		    Dec 22, 2018
+    	
+    </time>
+    
+</div>
+                </div>
+                
+                
+                    <div class="postShorten-content" itemprop="articleBody">
+                        <p>As I wrote in my previous blog entry before a while I decided to give up the domains for my personal projects and let it run as subdomains under my personal domain janbaer.de.</p>
+<p>Before a while I realized, how easy it is to host a PWA on Github as a <strong>gh-page</strong> and thanks to Github and with the help of <strong>Let’s encrypt</strong> your PWA can also run over HTTPs which gives you more security but also the ability to use ServiceWorkers. The only constraint you have to live with is, that you’ll have no serve backend to use Node.js for example. So there’ll be also no server side rendering.</p>
+<p>But that was fine for my projects and that’s why I decided to rewrite MDWiki completely for the  third time. In the first version I was using Angular 1 with Node.js on the backend site. After 3 years I wanted to rewrite it and I decided to use Next.js wich is using React.js and Node.js in the backend.</p>
+<p>So for the third version I decided to not make a complete rewrite and just to make some slightly changes to be able to use some code from the second version. That’s why I don’t wanted to leave the React.js world completely. But I wanted to replace it with <a href="https://preactjs.com/" target="_blank" rel="noopener">Preact.js</a> which has a much smaller footprint than React.js. And because of there’s no server side code, I completely dropped Next.js.</p>
+<p>But instead of using Webpack directly for the module bundling I decided to use <a href="https://parceljs.org/" target="_blank" rel="noopener">Parcel.js</a> which is another more lighweight module bundler.</p>
+<p>An because of my experience of the second version of MDWiki and also my daily work with React.js it took me less than two months to rewrite MDWiki with the same functionality as from the second version and let it run under <a href="https://mdwiki.janbaer.de" target="_blank" rel="noopener">mdwiki.janbaer.de</a>. When I started with the project I wanted to use a small CSS framework and I started with <a href="https://getuikit.com/docs/introduction" target="_blank" rel="noopener">UIKit</a>. But then I realized that I don’t used so much from the framework and I could write it on my own.</p>
+<p>Another feature I also used, is a ServiceWorker, to be able to also be runnable offline. ServiceWorker you can only use when your website is served via https.</p>
+<p>The result is now a very lightweight and very easy deployable PWA, that has just a few dependencies.</p>
+
+                        
+                        
+                            <p>
+                                <a href="/2018/12/22/2018-12-22-mdwiki_rewrite/#post-footer" class="postShorten-excerpt_link link">
+                                    Comment and share
+                                </a>
+                            </p>
+                        
+                    </div>
+                
+            </div>
+            
+        </article>
+    
+        
+        <article class="postShorten postShorten--thumbnailimg-bottom" itemscope="" itemtype="http://schema.org/BlogPosting">
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
                                 <a class="link-unstyled" href="/2018/10/07/2017-10-07_reject_domains/">Reject domains for personal projects</a>
                         
                     </h1>
@@ -226,7 +270,7 @@
                 
                     <div class="postShorten-content" itemprop="articleBody">
                         <p>Because of personal reasons I had to reject to both domain names I used for my personal projects<br><strong>mdwiki.net</strong> and <strong>howcani.eu</strong>. So from November this years, will no longer be reachable.</p>
-<p>But I’ll continue with the hosting for both projects as subdomains for the domain I use for my self since many years. So MDWiki will be reachable under <a href="https://mdwiki.janbaer.de" target="_blank" rel="external">mdwiki.janbaer.de</a> and HowCanI will be hosted<br>under <a href="https://howcani.janbaer.de" target="_blank" rel="external">howcani.janbaer.de</a>.</p>
+<p>But I’ll continue with the hosting for both projects as subdomains for the domain I use for my self since many years. So MDWiki will be reachable under <a href="https://mdwiki.janbaer.de" target="_blank" rel="noopener">mdwiki.janbaer.de</a> and HowCanI will be hosted<br>under <a href="https://howcani.janbaer.de" target="_blank" rel="noopener">howcani.janbaer.de</a>.</p>
 <p>I’ll continue both projects as my personal projects, since I used it for myself for some years. But<br>it’s still possible, to connect to your own GitHub repository.</p>
 
                         

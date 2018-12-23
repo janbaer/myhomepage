@@ -13,7 +13,7 @@
         <link rel="alternative" type="application/atom+xml" title="RSS" href="/atom.xml">
     
     <meta name="description" content="In my current project I have got some .csf files with the requirement to import these filesto my project as base data to use it as inmemory repository. The best solution was these single line of code">
-<meta name="keywords" content="csv,powershell,json">
+<meta name="keywords" content="powershell,csv,json">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Csv to Json with Powershell">
 <meta property="og:url" content="https://www.janbaer.de/2013/02/26/2013-02-26-csvtojsonwithpowershell/index.html">
@@ -228,8 +228,8 @@
         <div class="main-content-wrap">
             <p>In my current project I have got some .csf files with the requirement to import these files<br>to my project as base data to use it as inmemory repository.</p>
 <p>The best solution was these single line of code in powershell.</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Get-Content</span> -path <span class="variable">$inputFile</span> | <span class="built_in">ConvertFrom-Csv</span> -Delimiter <span class="string">';'</span> | <span class="built_in">ConvertTo-Json</span> | <span class="built_in">Out-File</span> <span class="variable">$outputFile</span></div></pre></td></tr></table></figure>
-<p>You can download the complete powershell script from my <a href="https://gist.github.com/janbaer/5045798" target="_blank" rel="external">gist repository</a> at github.</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Content</span> -path <span class="variable">$inputFile</span> | <span class="built_in">ConvertFrom-Csv</span> -Delimiter <span class="string">';'</span> | <span class="built_in">ConvertTo-Json</span> | <span class="built_in">Out-File</span> <span class="variable">$outputFile</span></span><br></pre></td></tr></table></figure>
+<p>You can download the complete powershell script from my <a href="https://gist.github.com/janbaer/5045798" target="_blank" rel="noopener">gist repository</a> at github.</p>
 
             
         </div>

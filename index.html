@@ -203,6 +203,50 @@
                 <div class="postShorten-header">
                     <h1 class="postShorten-title" itemprop="headline">
                         
+                                <a class="link-unstyled" href="/2018/12/22/2018-12-22-mdwiki_rewrite/">MDWiki rewrite</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Sat Dec 22 2018 00:00:00 GMT+0100">
+	
+		    Dec 22, 2018
+    	
+    </time>
+    
+</div>
+                </div>
+                
+                
+                    <div class="postShorten-content" itemprop="articleBody">
+                        <p>As I wrote in my previous blog entry before a while I decided to give up the domains for my personal projects and let it run as subdomains under my personal domain janbaer.de.</p>
+<p>Before a while I realized, how easy it is to host a PWA on Github as a <strong>gh-page</strong> and thanks to Github and with the help of <strong>Let’s encrypt</strong> your PWA can also run over HTTPs which gives you more security but also the ability to use ServiceWorkers. The only constraint you have to live with is, that you’ll have no serve backend to use Node.js for example. So there’ll be also no server side rendering.</p>
+<p>But that was fine for my projects and that’s why I decided to rewrite MDWiki completely for the  third time. In the first version I was using Angular 1 with Node.js on the backend site. After 3 years I wanted to rewrite it and I decided to use Next.js wich is using React.js and Node.js in the backend.</p>
+<p>So for the third version I decided to not make a complete rewrite and just to make some slightly changes to be able to use some code from the second version. That’s why I don’t wanted to leave the React.js world completely. But I wanted to replace it with <a href="https://preactjs.com/" target="_blank" rel="noopener">Preact.js</a> which has a much smaller footprint than React.js. And because of there’s no server side code, I completely dropped Next.js.</p>
+<p>But instead of using Webpack directly for the module bundling I decided to use <a href="https://parceljs.org/" target="_blank" rel="noopener">Parcel.js</a> which is another more lighweight module bundler.</p>
+<p>An because of my experience of the second version of MDWiki and also my daily work with React.js it took me less than two months to rewrite MDWiki with the same functionality as from the second version and let it run under <a href="https://mdwiki.janbaer.de" target="_blank" rel="noopener">mdwiki.janbaer.de</a>. When I started with the project I wanted to use a small CSS framework and I started with <a href="https://getuikit.com/docs/introduction" target="_blank" rel="noopener">UIKit</a>. But then I realized that I don’t used so much from the framework and I could write it on my own.</p>
+<p>Another feature I also used, is a ServiceWorker, to be able to also be runnable offline. ServiceWorker you can only use when your website is served via https.</p>
+<p>The result is now a very lightweight and very easy deployable PWA, that has just a few dependencies.</p>
+
+                        
+                        
+                            <p>
+                                <a href="/2018/12/22/2018-12-22-mdwiki_rewrite/#post-footer" class="postShorten-excerpt_link link">
+                                    Comment and share
+                                </a>
+                            </p>
+                        
+                    </div>
+                
+            </div>
+            
+        </article>
+    
+        
+        <article class="postShorten postShorten--thumbnailimg-bottom" itemscope="" itemtype="http://schema.org/BlogPosting">
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
                                 <a class="link-unstyled" href="/2018/10/07/2017-10-07_reject_domains/">Reject domains for personal projects</a>
                         
                     </h1>
@@ -225,7 +269,7 @@
                 
                     <div class="postShorten-content" itemprop="articleBody">
                         <p>Because of personal reasons I had to reject to both domain names I used for my personal projects<br><strong>mdwiki.net</strong> and <strong>howcani.eu</strong>. So from November this years, will no longer be reachable.</p>
-<p>But I’ll continue with the hosting for both projects as subdomains for the domain I use for my self since many years. So MDWiki will be reachable under <a href="https://mdwiki.janbaer.de" target="_blank" rel="external">mdwiki.janbaer.de</a> and HowCanI will be hosted<br>under <a href="https://howcani.janbaer.de" target="_blank" rel="external">howcani.janbaer.de</a>.</p>
+<p>But I’ll continue with the hosting for both projects as subdomains for the domain I use for my self since many years. So MDWiki will be reachable under <a href="https://mdwiki.janbaer.de" target="_blank" rel="noopener">mdwiki.janbaer.de</a> and HowCanI will be hosted<br>under <a href="https://howcani.janbaer.de" target="_blank" rel="noopener">howcani.janbaer.de</a>.</p>
 <p>I’ll continue both projects as my personal projects, since I used it for myself for some years. But<br>it’s still possible, to connect to your own GitHub repository.</p>
 
                         
@@ -310,7 +354,7 @@
 <p><strong>Attention</strong> Please make a backup before you’re formatting it!!!</p>
 <p>Then just go into the terminal and enter <strong>diskutil list</strong>. Here should see the USB drive listed (in my case it’s /dev/disk2)</p>
 <p>In case you’ve only one partition on this USB stick you’ve to convert <strong>disk2s2</strong> to a AppleCoreStorage with using you own passphrase. You can do this with the following command.</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">diskutil </span>cs convert <span class="keyword">disk2s2 </span>-passphrase yoursupersecurepassphrase</div></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">diskutil </span>cs convert <span class="keyword">disk2s2 </span>-passphrase yoursupersecurepassphrase</span><br></pre></td></tr></table></figure>
 <p>After some minutes the USB stick should be remounted and it’s protect with the passphrase of your choice. When you want you can save the passphrase in your local keychain so that you don’t have to enter it always again.</p>
 <p>But in case that someone will “find” your USB-stick, he’ll have no access to the data that are stored on it without knowing the passphrase.</p>
 
@@ -359,8 +403,8 @@
 <p>The first would be to create a cron job on the server on which Docker is<br>running and let them execute the job with <code>docker run</code>.</p>
 <p>The second way would be to let do everything within the Docker container.<br>But you don’t need to implement any scheduling functionality since it’s out of<br>the box available from any Linux based container.</p>
 <p>For example when your container is using the tiny Alpine base image you can use<br><strong>crond</strong> for it. The following code snippets are showing you everything what<br>is todo.</p>
-<h3 id="run-sh"><a href="#run-sh" class="headerlink" title="run.sh"></a>run.sh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"></div><div class="line">NOW=$(date +<span class="string">"%T"</span>)</div><div class="line"></div><div class="line"><span class="built_in">echo</span> <span class="string">"Hello from the job at <span class="variable">$&#123;NOW&#125;</span> in <span class="variable">$(pwd)</span>"</span> &gt;&gt; /dev/stdout</div></pre></td></tr></table></figure>
-<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">FROM</span> alpine:latest</div><div class="line"></div><div class="line"><span class="keyword">COPY</span><span class="bash"> ./job.sh /etc/periodic/15min/job</span></div><div class="line"><span class="keyword">RUN</span><span class="bash"> chmod +x /etc/periodic/15min/job</span></div><div class="line"></div><div class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">"crond"</span>, <span class="string">"-fS"</span>]</span></div></pre></td></tr></table></figure>
+<h3 id="run-sh"><a href="#run-sh" class="headerlink" title="run.sh"></a>run.sh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"></span><br><span class="line">NOW=$(date +<span class="string">"%T"</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello from the job at <span class="variable">$&#123;NOW&#125;</span> in <span class="variable">$(pwd)</span>"</span> &gt;&gt; /dev/stdout</span><br></pre></td></tr></table></figure>
+<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> alpine:latest</span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> ./job.sh /etc/periodic/15min/job</span></span><br><span class="line"><span class="bash">RUN chmod +x /etc/periodic/15min/job</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">CMD [<span class="string">"crond"</span>, <span class="string">"-fS"</span>]</span></span><br></pre></td></tr></table></figure>
 <p>The dockerfile is doing two things. It’s copying the <strong>job.sh</strong> into a<br>predefined folder and mark them as executable.</p>
 <p>All scripts that are within this folder will be executed by<br><strong>crond</strong> every 15 minutes. There’re more predefined folders under<br><strong>etc/periodic</strong> to let run a job hourly, daily, weekly or once per month.<br>In case you need more flexibility you’ve to change the crontabs file for the<br><strong>root</strong> user manually.</p>
 <p>The program <strong>crond</strong> comes with the tiny Alpine image but it will not be<br>executed automatically as a background daemon.</p>
@@ -372,6 +416,59 @@
                         
                             <p>
                                 <a href="/2016/10/23/2016-10-23_howto_run_a_sheduled_job_within_a_docker_container/#post-footer" class="postShorten-excerpt_link link">
+                                    Comment and share
+                                </a>
+                            </p>
+                        
+                    </div>
+                
+            </div>
+            
+        </article>
+    
+        
+        <article class="postShorten postShorten--thumbnailimg-bottom" itemscope="" itemtype="http://schema.org/BlogPosting">
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
+                                <a class="link-unstyled" href="/2015/10/17/2015-10-17-From-Csharp-to-Python/">From C# to Python</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Sat Oct 17 2015 00:00:00 GMT+0200">
+	
+		    Oct 17, 2015
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/development/">development</a>
+
+
+    
+</div>
+                </div>
+                
+                
+                    <div class="postShorten-content" itemprop="articleBody">
+                        <p>Last week I did my first steps with <a href="https://de.wikipedia.org/wiki/Python_(Programmiersprache" target="_blank" rel="noopener">Python</a>) and I was really suprised about this programming language that has such a long history.</p>
+<p>It provides features that I wouldn’t expect. To dive deeper into the language I solved a <strong>Kata</strong>,<br>what I mostly do when learning a new programming language. This time I choosen the <a href="http://osherove.com/tdd-kata-1/" target="_blank" rel="noopener">StringCalculator kata</a> from Roy Osherove. You can find the source code on my <a href="https://github.com/janbaer/Katas/tree/master/Kata.StringCalculator.Python" target="_blank" rel="noopener">github</a> page.</p>
+<p>One of the nice features I found was <strong>list comprehensions</strong> feature.</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[number for number in [<span class="number">1</span>, <span class="number">2</span>, <span class="number">1000</span>, <span class="number">1001</span>] if number &lt;= <span class="number">1000</span>]</span><br><span class="line"># returns [<span class="number">1</span>, <span class="number">2</span>, <span class="number">1000</span>]</span><br></pre></td></tr></table></figure>
+<p>Another nice feature was the built-in <strong>any</strong> function. It does the same like the same linq function from C#. It returns true when any element of the iterable returns true.</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">any</span>(<span class="built_in">number</span> &lt; <span class="number">0</span> <span class="keyword">for</span> <span class="built_in">number</span> <span class="keyword">in</span> [<span class="number">-1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line"><span class="comment"># returns true</span></span><br></pre></td></tr></table></figure>
+<p>The same is for the <strong>filter</strong> function. It takes a function as first parameter that returns a boolean and returns all elements from the given list whith those elements for which the function returns true.</p>
+<p>At least I used a feature that ES6 also provides, the <strong>Destructuring assignment</strong>. So in the Kata I used a regular expression to split the definition of delimiter from the list of numbers.</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">match</span> = myRegex.<span class="built_in">search</span>(<span class="built_in">input</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">match</span>:</span><br><span class="line">  delimiter, <span class="built_in">input</span> = <span class="keyword">match</span>.groups()</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> delimiter, <span class="built_in">input</span></span><br></pre></td></tr></table></figure>
+<p>The regex returned in a positive case two groups. Both groups I could directly assign to the variables <em>delimiter</em> and <em>input</em> and also return this variables as result of the function. In this case both variables will be automatically packed as a tuple and in the calling function unpacked and assigned to two another variables, very nice…</p>
+<p>So I’m just at the beginning of journey through the features of python and I’ll post here more about my experiences…</p>
+
+                        
+                        
+                            <p>
+                                <a href="/2015/10/17/2015-10-17-From-Csharp-to-Python/#post-footer" class="postShorten-excerpt_link link">
                                     Comment and share
                                 </a>
                             </p>
@@ -431,59 +528,6 @@
                 <div class="postShorten-header">
                     <h1 class="postShorten-title" itemprop="headline">
                         
-                                <a class="link-unstyled" href="/2015/10/17/2015-10-17-From-Csharp-to-Python/">From C# to Python</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" content="Sat Oct 17 2015 00:00:00 GMT+0200">
-	
-		    Oct 17, 2015
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/development/">development</a>
-
-
-    
-</div>
-                </div>
-                
-                
-                    <div class="postShorten-content" itemprop="articleBody">
-                        <p>Last week I did my first steps with <a href="https://de.wikipedia.org/wiki/Python_(Programmiersprache" target="_blank" rel="external">Python</a>) and I was really suprised about this programming language that has such a long history.</p>
-<p>It provides features that I wouldn’t expect. To dive deeper into the language I solved a <strong>Kata</strong>,<br>what I mostly do when learning a new programming language. This time I choosen the <a href="http://osherove.com/tdd-kata-1/" target="_blank" rel="external">StringCalculator kata</a> from Roy Osherove. You can find the source code on my <a href="https://github.com/janbaer/Katas/tree/master/Kata.StringCalculator.Python" target="_blank" rel="external">github</a> page.</p>
-<p>One of the nice features I found was <strong>list comprehensions</strong> feature.</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[number for number in [<span class="number">1</span>, <span class="number">2</span>, <span class="number">1000</span>, <span class="number">1001</span>] if number &lt;= <span class="number">1000</span>]</div><div class="line"># returns [<span class="number">1</span>, <span class="number">2</span>, <span class="number">1000</span>]</div></pre></td></tr></table></figure>
-<p>Another nice feature was the built-in <strong>any</strong> function. It does the same like the same linq function from C#. It returns true when any element of the iterable returns true.</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">any</span>(<span class="built_in">number</span> &lt; <span class="number">0</span> <span class="keyword">for</span> <span class="built_in">number</span> <span class="keyword">in</span> [<span class="number">-1</span>,<span class="number">2</span>,<span class="number">3</span>])</div><div class="line"><span class="comment"># returns true</span></div></pre></td></tr></table></figure>
-<p>The same is for the <strong>filter</strong> function. It takes a function as first parameter that returns a boolean and returns all elements from the given list whith those elements for which the function returns true.</p>
-<p>At least I used a feature that ES6 also provides, the <strong>Destructuring assignment</strong>. So in the Kata I used a regular expression to split the definition of delimiter from the list of numbers.</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">match</span> = myRegex.<span class="built_in">search</span>(<span class="built_in">input</span>)</div><div class="line"><span class="keyword">if</span> <span class="keyword">match</span>:</div><div class="line">  delimiter, <span class="built_in">input</span> = <span class="keyword">match</span>.groups()</div><div class="line"></div><div class="line"><span class="keyword">return</span> delimiter, <span class="built_in">input</span></div></pre></td></tr></table></figure>
-<p>The regex returned in a positive case two groups. Both groups I could directly assign to the variables <em>delimiter</em> and <em>input</em> and also return this variables as result of the function. In this case both variables will be automatically packed as a tuple and in the calling function unpacked and assigned to two another variables, very nice…</p>
-<p>So I’m just at the beginning of journey through the features of python and I’ll post here more about my experiences…</p>
-
-                        
-                        
-                            <p>
-                                <a href="/2015/10/17/2015-10-17-From-Csharp-to-Python/#post-footer" class="postShorten-excerpt_link link">
-                                    Comment and share
-                                </a>
-                            </p>
-                        
-                    </div>
-                
-            </div>
-            
-        </article>
-    
-        
-        <article class="postShorten postShorten--thumbnailimg-bottom" itemscope="" itemtype="http://schema.org/BlogPosting">
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
                                 <a class="link-unstyled" href="/2013/12/08/2013-12-08-find-out-which-process-uses-my-port/">Find out which process uses my port</a>
                         
                     </h1>
@@ -507,9 +551,9 @@
                     <div class="postShorten-content" itemprop="articleBody">
                         <p>Today I had the problem, that someone has used the port 3000 on my macbook and I couldn’t start my node.js server.<br>At first I tried to close all open terminal windows and exit the terminal app, but this wasn’t the solution for my problem.</p>
 <p>Now I’ve tried to find out wich process uses the port. For that I entered the following command in the terminal:</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lsof -<span class="selector-tag">i</span> :<span class="number">3000</span></div></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -<span class="selector-tag">i</span> :<span class="number">3000</span></span><br></pre></td></tr></table></figure>
 <p>This command returns me informations about the process that is using my port. With the processid I’m now be able to kill the process.</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kill <span class="number">-9</span> <span class="number">11381</span></div></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill <span class="number">-9</span> <span class="number">11381</span></span><br></pre></td></tr></table></figure>
 
                         
                         
@@ -562,9 +606,9 @@
 <p>Wir waren natürlich auch auf “The Palm, Jumeirah”, der einer Palme nachempfundenden künstlich angelegten Insel. Dort waren wir im Atlantis, dem größten Hotel von Dubai, und auch einem der größten Welt. Im Hotel wartete eines der größten Aquarien der Welt auf uns, dass wirklich einen beeindruckenende Einblick in die Unterwasserwelt bot.</p>
 <p>Der Höhepunkt unserer Besuchs in Dubai war allerdings der Ausflug auf den mit 828 m aktuell höchsten Gebäude der Welt, dem Burj Khalifa. Die Aussichtsplattform lag leider nicht ganz oben, aber 452 m sind trotzdem mehr als beeindruckend. Mit dem Fahrstuhl ist man in genau 60 Sekunden oben. Auf der Aussichtsplattform konnte man durch ein spezielles Fernglas in den historischen Modus schalteten war da, wo sich heute ein Wolkenkratzer neben den anderen reiht, nichts als Wüste oder maximal sehr niedrige Wohngebäude der Beduinen befanden. Die Aussicht auf Dubai war wirklich atemberaubend.</p>
 <p>Wir waren nur knapp 3 Tage in Dubai, konnten aber sehr vieles, aber leider nicht alles sehen. So gibt es z.B. in Dubai noch ein natürlich überdachtes Skicenter, an dem wir auch vorbeigefahren sind, aber leider nicht drin waren.<br>Dubai war auf jeden Fall ein Erlebnis, das ich jedem, den die Hitze nicht abschreckt, weiter empfehlen kann.</p>
-<p>Wir haben natürlich auch viele Bilder gemacht. Die besten habe ich wie immer bei Google+ online gestellt. Ihr könnt sie Euch <a href="http://is.gd/fxZrSh" target="_blank" rel="external">hier</a> anschauen.</p>
+<p>Wir haben natürlich auch viele Bilder gemacht. Die besten habe ich wie immer bei Google+ online gestellt. Ihr könnt sie Euch <a href="http://is.gd/fxZrSh" target="_blank" rel="noopener">hier</a> anschauen.</p>
 <p>Wir hoffen, das sie Euch gefallen!</p>
-<p>Ihr Euch könnt Euch noch ein selbst aufgenommenes Video von der Wasserfontänenshow, die jeden Tag direkt vor dem Burj Khalifa aufgeführt wird, bei <a href="http://www.youtube.com/watch?v=o6K5ginQGjA" target="_blank" rel="external">Youtube</a> anschauen.</p>
+<p>Ihr Euch könnt Euch noch ein selbst aufgenommenes Video von der Wasserfontänenshow, die jeden Tag direkt vor dem Burj Khalifa aufgeführt wird, bei <a href="http://www.youtube.com/watch?v=o6K5ginQGjA" target="_blank" rel="noopener">Youtube</a> anschauen.</p>
 
                         
                         
@@ -613,65 +657,12 @@
 <p>Die Tatsache, das in einem eigentlich wohlhabenden Land, wie Indien, in der keine Diktatoren sich bereichern, Kinder morgens, statt in die Schule, betteln gehen müssen, um am Abend nicht mit einem leeren Magen einschlafen zu müssen, hat mich wirklich sehr nachdenklich und traurig gemacht. Als ich einmal drei Kindern je 10 Rupien in die Hand gedrückt habe, standen ein paar Minuten später, gleich drei mal soviel vor dem Bus. Das zeigt, das die Armut eigentlich noch viel Schlimmer ist, als es auf den ersten Blick schon erscheint.</p>
 <p>Ich hatte eigentlich den größten Teil der Reise ein sehr schlechtes Gefühl, weil die Armut und der Schmutz doch die positiven Momente überwog. Ich glaube, ich werde nie den Anblick der wahren Flut an Menschen vergessen, die mehr oder weniger durch den Tag vegetieren und deren Sinn des Lebens darin besteht, irgendwie etwas Geld für Essen zu erbetteln.</p>
 <p>Die Reise nach Indien war für uns sehr interessant, zum großen Teil für uns aber ein eher unangenehmes Erlebnis.</p>
-<p>Wir haben natürlich auch viele Bilder gemacht. Die besten habe ich wie immer bei Google+ online gestellt. Ihr könnt sie Euch <a href="http://is.gd/IS3UWO" target="_blank" rel="external">hier</a> anschauen.</p>
+<p>Wir haben natürlich auch viele Bilder gemacht. Die besten habe ich wie immer bei Google+ online gestellt. Ihr könnt sie Euch <a href="http://is.gd/IS3UWO" target="_blank" rel="noopener">hier</a> anschauen.</p>
 
                         
                         
                             <p>
                                 <a href="/2013/10/26/2013-10-26-reisebericht-indien/#post-footer" class="postShorten-excerpt_link link">
-                                    Comment and share
-                                </a>
-                            </p>
-                        
-                    </div>
-                
-            </div>
-            
-        </article>
-    
-        
-        <article class="postShorten postShorten--thumbnailimg-bottom" itemscope="" itemtype="http://schema.org/BlogPosting">
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
-                                <a class="link-unstyled" href="/2013/09/01/2013-09-01-using-hooks-in-git/">Using hooks in git</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" content="Sun Sep 01 2013 00:00:00 GMT+0200">
-	
-		    Sep 01, 2013
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/develop/">develop</a>
-
-
-    
-</div>
-                </div>
-                
-                
-                    <div class="postShorten-content" itemprop="articleBody">
-                        <p>Wenn man nach “git hooks” sucht, findet man jede Menge Links zu guten Beschreibungen, was es für verschiedene Hooks in Git gibt und was man alles damit machen kann.</p>
-<p>Deshalb möchte ich mich in diesem Artikel darauf beschränken, zu beschreiben, wie ich den <strong>post-commit</strong> hook in einem meiner Projekte verwende.</p>
-<p>Ich habe für mich mit <a href="http://markdoc.org" target="_blank" rel="external">MarkDoc</a>ein kleines Wiki erstellt das ich über die Github-Websites über <a href="http://wiki.janbaer.de" target="_blank" rel="external">wiki.janbaer.de</a> erreiche. Dieses Wiki wird mit einfachen Textdateien im <strong>Markdown</strong> Format erstellt und über ein <strong>Python</strong> Script in HTML umgewandelt.</p>
-<p>Ich habe jeweils für Text- und HTML-Dateien ein eigenes Git-Repository eingerichet, damit ich die HTML-Dateien über GitHub als Webseiten publishen kann.</p>
-<p>Nun möchte ich, das, sobald ich einen Commit in meinem Source Repository gemacht habe, automatisch die HTML-Dateien erstellt und das Ergebnis dann gleich zu Github gepusht wird.</p>
-<p>Um den Vorgang zu automatisieren, habe ich im Unterordner <strong>.git/hooks</strong> die Datei <strong>post-commit-sample</strong> in <strong>post-commit</strong> umbenannt und mit <strong>chmod</strong> aus ausführbar markiert.</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cd</span> .git/hooks</div><div class="line">mv <span class="keyword">post</span>-commit-<span class="keyword">sample</span> <span class="keyword">post</span>-commit</div><div class="line">chmod +x <span class="keyword">post</span>-commit</div><div class="line"><span class="keyword">cd</span> ../..</div></pre></td></tr></table></figure>
-<p>In die <strong>post-commit</strong> Datei habe ich jetzt folgende Befehle eingefügt</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">message</span>=$(git log -<span class="number">1</span> HEAD --pretty<span class="symbol">=format</span>:%s)</div><div class="line"><span class="symbol">git</span> <span class="keyword">push</span></div><div class="line"><span class="keyword">markdoc </span><span class="keyword">build</span></div><div class="line"><span class="keyword">pushd </span>.</div><div class="line"><span class="symbol">cd</span> ~/DropBox/WebSites/wiki</div><div class="line"><span class="symbol">git</span> <span class="keyword">add </span>.</div><div class="line"><span class="symbol">git</span> commit -m <span class="string">"$message"</span></div><div class="line"><span class="symbol">git</span> <span class="keyword">push</span></div><div class="line"><span class="keyword">popd </span>.</div></pre></td></tr></table></figure>
-<p>In der ersten Zeile hole ich mir die Commit-Message aus meinem letzten Commit, damit ich diese an Commit für das zweite Git-Repository verwenden kann. Danach werden zuerst mal meine Änderungen auf Github gepusht. Über <strong>markdoc build</strong> werden die neuen HTML-Dateien erstellt. Danach wechsle ich in das Verzeichnis, in dem sich mein zweites Git-Repository befindet und führe dort die nötigen Git-Befehle aus, um die neuen oder geänderten Dateien zu commiten und zu Github zu pushen.</p>
-<p>Leider gibt es keinen Hook für <strong>pre-push</strong>. Diesen könnte man gut verwenden, um einen lokalen Build mit anschließenden UnitTests durchzuführen. Das möchte ich ungern bei jedem Commit machen.</p>
-
-                        
-                        
-                            <p>
-                                <a href="/2013/09/01/2013-09-01-using-hooks-in-git/#post-footer" class="postShorten-excerpt_link link">
                                     Comment and share
                                 </a>
                             </p>
