@@ -355,7 +355,7 @@
     <link href="https://www.janbaer.de/2013/02/26/2013-02-26-csvtojsonwithpowershell/"/>
     <id>https://www.janbaer.de/2013/02/26/2013-02-26-csvtojsonwithpowershell/</id>
     <published>2013-02-25T23:00:00.000Z</published>
-    <updated>2017-04-01T12:05:18.571Z</updated>
+    <updated>2018-12-23T14:00:22.289Z</updated>
     
     <content type="html"><![CDATA[<p>In my current project I have got some .csf files with the requirement to import these files<br>to my project as base data to use it as inmemory repository.</p><p>The best solution was these single line of code in powershell.</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Content</span> -path <span class="variable">$inputFile</span> | <span class="built_in">ConvertFrom-Csv</span> -Delimiter <span class="string">';'</span> | <span class="built_in">ConvertTo-Json</span> | <span class="built_in">Out-File</span> <span class="variable">$outputFile</span></span><br></pre></td></tr></table></figure><p>You can download the complete powershell script from my <a href="https://gist.github.com/janbaer/5045798" target="_blank" rel="noopener">gist repository</a> at github.</p>]]></content>
     
