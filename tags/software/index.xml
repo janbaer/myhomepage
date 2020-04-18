@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software on Homepage Jan Baer</title>
+    <link>https://www.janbaer.de/tags/software/</link>
+    <description>Recent content in software on Homepage Jan Baer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.janbaer.de/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reject domains for personal projects</title>
+      <link>https://www.janbaer.de/posts/2017-10-07_reject_domains/</link>
+      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2017-10-07_reject_domains/</guid>
+      <description>Because of personal reasons I had to reject to both domain names I used for my personal projects mdwiki.net and howcani.eu. So from November this years, will no longer be reachable.
+But I&amp;rsquo;ll continue with the hosting for both projects as subdomains for the domain I use for my self since many years. So MDWiki will be reachable under mdwiki.janbaer.de and HowCanI will be hosted under howcani.janbaer.de.
+I&amp;rsquo;ll continue both projects as my personal projects, since I used it for myself for some years.</description>
+    </item>
+    
+  </channel>
+</rss>

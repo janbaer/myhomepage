@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>develop on Homepage Jan Baer</title>
+    <link>https://www.janbaer.de/tags/develop/</link>
+    <description>Recent content in develop on Homepage Jan Baer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.janbaer.de/tags/develop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MDWiki rewrite</title>
+      <link>https://www.janbaer.de/posts/2018-12-22-mdwiki_rewrite/</link>
+      <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2018-12-22-mdwiki_rewrite/</guid>
+      <description>As I wrote in my previous blog entry before a while I decided to give up the domains for my personal projects and let it run as subdomains under my personal domain janbaer.de.
+Before a while I realized, how easy it is to host a PWA on Github as a gh-page and thanks to Github and with the help of Let&amp;rsquo;s encrypt your PWA can also run over HTTPs which gives you more security but also the ability to use ServiceWorkers.</description>
+    </item>
+    
+  </channel>
+</rss>

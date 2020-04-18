@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macos on Homepage Jan Baer</title>
+    <link>https://www.janbaer.de/tags/macos/</link>
+    <description>Recent content in macos on Homepage Jan Baer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Nov 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.janbaer.de/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How can I protect my external USB stick with a password on MacOS Sierra</title>
+      <link>https://www.janbaer.de/posts/2016-11-05_howto_protect_usbstick_with_password_on_macos/</link>
+      <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2016-11-05_howto_protect_usbstick_with_password_on_macos/</guid>
+      <description>To protect your USB-stick with a password you have to format it first with the Disk Utility program to the Mac OS Extended (Journaled) format with the GUI-Partitiontable.
+Attention Please make a backup before you&amp;rsquo;re formatting it!!!
+Then just go into the terminal and enter diskutil list. Here should see the USB drive listed (in my case it&amp;rsquo;s /dev/disk2)
+In case you&amp;rsquo;ve only one partition on this USB stick you&amp;rsquo;ve to convert disk2s2 to a AppleCoreStorage with using you own passphrase.</description>
+    </item>
+    
+    <item>
+      <title>Find out which process uses my port</title>
+      <link>https://www.janbaer.de/posts/2013-12-08-find-out-which-process-uses-my-port/</link>
+      <pubDate>Sun, 08 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2013-12-08-find-out-which-process-uses-my-port/</guid>
+      <description>Today I had the problem, that someone has used the port 3000 on my macbook and I couldn&amp;rsquo;t start my node.js server. At first I tried to close all open terminal windows and exit the terminal app, but this wasn&amp;rsquo;t the solution for my problem.
+Now I&amp;rsquo;ve tried to find out wich process uses the port. For that I entered the following command in the terminal:
+lsof -i :3000 This command returns me informations about the process that is using my port.</description>
+    </item>
+    
+  </channel>
+</rss>

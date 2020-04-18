@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MacOSX on Homepage Jan Baer</title>
+    <link>https://www.janbaer.de/tags/macosx/</link>
+    <description>Recent content in MacOSX on Homepage Jan Baer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Oct 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.janbaer.de/tags/macosx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quicktip - Move windows between desktops on MacOSX</title>
+      <link>https://www.janbaer.de/posts/2015-10-17_quicktip_movewindowsbetweetendesktopsonmacosx/</link>
+      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2015-10-17_quicktip_movewindowsbetweetendesktopsonmacosx/</guid>
+      <description>To move windows, click and hold on any window titlebar and hit the shortcut you defined for the desktop (in my case it&amp;rsquo;s command+1,2,3) and the window will automatically moved to this dekstop.</description>
+    </item>
+    
+  </channel>
+</rss>

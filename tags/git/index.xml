@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Homepage Jan Baer</title>
+    <link>https://www.janbaer.de/tags/git/</link>
+    <description>Recent content in git on Homepage Jan Baer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Sep 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.janbaer.de/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using hooks in git</title>
+      <link>https://www.janbaer.de/posts/2013-09-01-using-hooks-in-git/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2013-09-01-using-hooks-in-git/</guid>
+      <description>Wenn man nach &amp;ldquo;git hooks&amp;rdquo; sucht, findet man jede Menge Links zu guten Beschreibungen, was es für verschiedene Hooks in Git gibt und was man alles damit machen kann.
+Deshalb möchte ich mich in diesem Artikel darauf beschränken, zu beschreiben, wie ich den post-commit hook in einem meiner Projekte verwende.
+Ich habe für mich mit MarkDocein kleines Wiki erstellt das ich über die Github-Websites über wiki.janbaer.de erreiche. Dieses Wiki wird mit einfachen Textdateien im Markdown Format erstellt und über ein Python Script in HTML umgewandelt.</description>
+    </item>
+    
+  </channel>
+</rss>

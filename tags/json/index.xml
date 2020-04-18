@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>json on Homepage Jan Baer</title>
+    <link>https://www.janbaer.de/tags/json/</link>
+    <description>Recent content in json on Homepage Jan Baer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Feb 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.janbaer.de/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Csv to Json with Powershell</title>
+      <link>https://www.janbaer.de/posts/2013-02-26-csvtojsonwithpowershell/</link>
+      <pubDate>Tue, 26 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2013-02-26-csvtojsonwithpowershell/</guid>
+      <description>In my current project I have got some .csf files with the requirement to import these files to my project as base data to use it as inmemory repository.
+The best solution was these single line of code in powershell.
+Get-Content -path $inputFile | ConvertFrom-Csv -Delimiter &#39;;&#39; | ConvertTo-Json | Out-File $outputFile You can download the complete powershell script from my gist repository at github.</description>
+    </item>
+    
+  </channel>
+</rss>

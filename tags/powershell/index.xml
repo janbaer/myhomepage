@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>powershell on Homepage Jan Baer</title>
+    <link>https://www.janbaer.de/tags/powershell/</link>
+    <description>Recent content in powershell on Homepage Jan Baer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Apr 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.janbaer.de/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Set-acl with Powershell</title>
+      <link>https://www.janbaer.de/posts/2013-04-01-set-acl-with-powershell/</link>
+      <pubDate>Mon, 01 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2013-04-01-set-acl-with-powershell/</guid>
+      <description>In meinem letzten Projekt war eine meiner Aufgaben, ein Script zu erstellen, das eine definierte Verzeichnisstruktur erstellt und einem bestimmten User die notwendigen Zugriffrechte darauf gibt. Weiterhin sollte das Script dann im IIS eine Website mit einem eigenen AppPool in diesem Verzeichnis erstellen.
+Ich hatte mich entschieden, das Script mit Powershell zu erstellen, da es hier schon fertige Module von Microsoft gibt, um den IIS zu verwalten, ohne das man dies über WMI machen müsste.</description>
+    </item>
+    
+    <item>
+      <title>Csv to Json with Powershell</title>
+      <link>https://www.janbaer.de/posts/2013-02-26-csvtojsonwithpowershell/</link>
+      <pubDate>Tue, 26 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2013-02-26-csvtojsonwithpowershell/</guid>
+      <description>In my current project I have got some .csf files with the requirement to import these files to my project as base data to use it as inmemory repository.
+The best solution was these single line of code in powershell.
+Get-Content -path $inputFile | ConvertFrom-Csv -Delimiter &#39;;&#39; | ConvertTo-Json | Out-File $outputFile You can download the complete powershell script from my gist repository at github.</description>
+    </item>
+    
+  </channel>
+</rss>

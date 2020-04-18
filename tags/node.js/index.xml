@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>node.js on Homepage Jan Baer</title>
+    <link>https://www.janbaer.de/tags/node.js/</link>
+    <description>Recent content in node.js on Homepage Jan Baer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Dec 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.janbaer.de/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Find out which process uses my port</title>
+      <link>https://www.janbaer.de/posts/2013-12-08-find-out-which-process-uses-my-port/</link>
+      <pubDate>Sun, 08 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2013-12-08-find-out-which-process-uses-my-port/</guid>
+      <description>Today I had the problem, that someone has used the port 3000 on my macbook and I couldn&amp;rsquo;t start my node.js server. At first I tried to close all open terminal windows and exit the terminal app, but this wasn&amp;rsquo;t the solution for my problem.
+Now I&amp;rsquo;ve tried to find out wich process uses the port. For that I entered the following command in the terminal:
+lsof -i :3000 This command returns me informations about the process that is using my port.</description>
+    </item>
+    
+  </channel>
+</rss>

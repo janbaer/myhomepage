@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c# on Homepage Jan Baer</title>
+    <link>https://www.janbaer.de/tags/c#/</link>
+    <description>Recent content in c# on Homepage Jan Baer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Oct 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.janbaer.de/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>From C# to Python</title>
+      <link>https://www.janbaer.de/posts/2015-10-17-from-csharp-to-python/</link>
+      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2015-10-17-from-csharp-to-python/</guid>
+      <description>Last week I did my first steps with Python and I was really suprised about this programming language that has such a long history.
+It provides features that I wouldn&amp;rsquo;t expect. To dive deeper into the language I solved a Kata, what I mostly do when learning a new programming language. This time I choosen the StringCalculator kata from Roy Osherove. You can find the source code on my github page.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Homepage Jan Baer</title>
+    <link>https://www.janbaer.de/tags/docker/</link>
+    <description>Recent content in Docker on Homepage Jan Baer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Oct 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.janbaer.de/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to run a scheduled job within a Docker container</title>
+      <link>https://www.janbaer.de/posts/2016-10-23_howto_run_a_sheduled_job_within_a_docker_container/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2016-10-23_howto_run_a_sheduled_job_within_a_docker_container/</guid>
+      <description>For some reasons it could be necessary to execute a job in scheduled time. When running the job within a Docker container there&amp;rsquo;re two ways to do this.
+The first would be to create a cron job on the server on which Docker is running and let them execute the job with docker run.
+The second way would be to let do everything within the Docker container. But you don&amp;rsquo;t need to implement any scheduling functionality since it&amp;rsquo;s out of the box available from any Linux based container.</description>
+    </item>
+    
+  </channel>
+</rss>
