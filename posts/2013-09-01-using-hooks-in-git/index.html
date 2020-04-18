@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.68.3 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="Jan Baer">
+<meta name="keywords" content="">
+<meta name="description" content="Wenn man nach &ldquo;git hooks&rdquo; sucht, findet man jede Menge Links zu guten Beschreibungen, was es für verschiedene Hooks in Git gibt und was man alles damit machen kann.
+Deshalb möchte ich mich in diesem Artikel darauf beschränken, zu beschreiben, wie ich den post-commit hook in einem meiner Projekte verwende.
+Ich habe für mich mit MarkDocein kleines Wiki erstellt das ich über die Github-Websites über wiki.janbaer.de erreiche. Dieses Wiki wird mit einfachen Textdateien im Markdown Format erstellt und über ein Python Script in HTML umgewandelt.">
+
+
+<meta property="og:description" content="Wenn man nach &ldquo;git hooks&rdquo; sucht, findet man jede Menge Links zu guten Beschreibungen, was es für verschiedene Hooks in Git gibt und was man alles damit machen kann.
+Deshalb möchte ich mich in diesem Artikel darauf beschränken, zu beschreiben, wie ich den post-commit hook in einem meiner Projekte verwende.
+Ich habe für mich mit MarkDocein kleines Wiki erstellt das ich über die Github-Websites über wiki.janbaer.de erreiche. Dieses Wiki wird mit einfachen Textdateien im Markdown Format erstellt und über ein Python Script in HTML umgewandelt.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Using hooks in git">
+<meta name="twitter:title" content="Using hooks in git">
+<meta property="og:url" content="https://www.janbaer.de/posts/2013-09-01-using-hooks-in-git/">
+<meta property="twitter:url" content="https://www.janbaer.de/posts/2013-09-01-using-hooks-in-git/">
+<meta property="og:site_name" content="Homepage Jan Baer">
+<meta property="og:description" content="Wenn man nach &ldquo;git hooks&rdquo; sucht, findet man jede Menge Links zu guten Beschreibungen, was es für verschiedene Hooks in Git gibt und was man alles damit machen kann.
+Deshalb möchte ich mich in diesem Artikel darauf beschränken, zu beschreiben, wie ich den post-commit hook in einem meiner Projekte verwende.
+Ich habe für mich mit MarkDocein kleines Wiki erstellt das ich über die Github-Websites über wiki.janbaer.de erreiche. Dieses Wiki wird mit einfachen Textdateien im Markdown Format erstellt und über ein Python Script in HTML umgewandelt.">
+<meta name="twitter:description" content="Wenn man nach &ldquo;git hooks&rdquo; sucht, findet man jede Menge Links zu guten Beschreibungen, was es für verschiedene Hooks in Git gibt und was man alles damit machen kann.
+Deshalb möchte ich mich in diesem Artikel darauf beschränken, zu beschreiben, wie ich den post-commit hook in einem meiner Projekte verwende.
+Ich habe für mich mit MarkDocein kleines Wiki erstellt das ich über die Github-Websites über wiki.janbaer.de erreiche. Dieses Wiki wird mit einfachen Textdateien im Markdown Format erstellt und über ein Python Script in HTML umgewandelt.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2013-09-01T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2013-09-01T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="develop">
+    
+  
+  
+    
+      <meta property="article:tag" content="git">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@reabnaj">
+
+
+  <meta name="twitter:creator" content="@reabnaj">
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.janbaer.de/images/avatar.jpg">
+  <meta property="twitter:image" content="https://www.janbaer.de/images/avatar.jpg">
+
+
+    <title>Using hooks in git</title>
+
+    <link rel="icon" href="https://www.janbaer.de/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://www.janbaer.de/posts/2013-09-01-using-hooks-in-git/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://www.janbaer.de/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="2">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://www.janbaer.de/">Homepage Jan Baer</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://www.janbaer.de/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.janbaer.de/images/avatar.jpg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="2">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://www.janbaer.de/#about">
+          <img class="sidebar-profile-picture" src="https://www.janbaer.de/images/avatar.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Jan Baer</h4>
+        
+          <h5 class="sidebar-profile-bio">I’m a passionated Softwaredeveloper from Munich.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.janbaer.de/posts">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home" title='Home'></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.janbaer.de/projects">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-area-chart" title='Projects'></i>
+      
+      <span class="sidebar-button-desc">Projects</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.janbaer.de/photography">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-camera", title='Photography'></i>
+      
+      <span class="sidebar-button-desc">Photography</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.janbaer.de/about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-user", title='About'></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.janbaer.de/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file-text-o" title='Tags'></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/janbaer" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.janbaer.de/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="2"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Using hooks in git
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2013-09-01T00:00:00Z">
+        
+  September 1, 2013
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.janbaer.de/categories/develop">develop</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>Wenn man nach &ldquo;git hooks&rdquo; sucht, findet man jede Menge Links zu guten Beschreibungen, was es für verschiedene Hooks in Git gibt und was man alles damit machen kann.</p>
+<p>Deshalb möchte ich mich in diesem Artikel darauf beschränken, zu beschreiben, wie ich den <strong>post-commit</strong> hook in einem meiner Projekte verwende.</p>
+<p>Ich habe für mich mit <a href="http://markdoc.org">MarkDoc</a>ein kleines Wiki erstellt das ich über die Github-Websites über <a href="http://wiki.janbaer.de">wiki.janbaer.de</a> erreiche. Dieses Wiki wird mit einfachen Textdateien im <strong>Markdown</strong> Format erstellt und über ein <strong>Python</strong> Script in HTML umgewandelt.</p>
+<p>Ich habe jeweils für Text- und HTML-Dateien ein eigenes Git-Repository eingerichet, damit ich die HTML-Dateien über GitHub als Webseiten publishen kann.</p>
+<p>Nun möchte ich, das, sobald ich einen Commit in meinem Source Repository gemacht habe, automatisch die HTML-Dateien erstellt und das Ergebnis dann gleich zu Github gepusht wird.</p>
+<p>Um den Vorgang zu automatisieren, habe ich im Unterordner <strong>.git/hooks</strong> die Datei <strong>post-commit-sample</strong> in <strong>post-commit</strong> umbenannt und mit <strong>chmod</strong> aus ausführbar markiert.</p>
+<pre><code>cd .git/hooks
+mv post-commit-sample post-commit
+chmod +x post-commit
+cd ../..
+</code></pre><p>In die <strong>post-commit</strong> Datei habe ich jetzt folgende Befehle eingefügt</p>
+<pre><code>message=$(git log -1 HEAD --pretty=format:%s)
+git push
+markdoc build
+pushd .
+cd ~/DropBox/WebSites/wiki
+git add .
+git commit -m &quot;$message&quot;
+git push
+popd .
+</code></pre><p>In der ersten Zeile hole ich mir die Commit-Message aus meinem letzten Commit, damit ich diese an Commit für das zweite Git-Repository verwenden kann. Danach werden zuerst mal meine Änderungen auf Github gepusht. Über <strong>markdoc build</strong> werden die neuen HTML-Dateien erstellt. Danach wechsle ich in das Verzeichnis, in dem sich mein zweites Git-Repository befindet und führe dort die nötigen Git-Befehle aus, um die neuen oder geänderten Dateien zu commiten und zu Github zu pushen.</p>
+<p>Leider gibt es keinen Hook für <strong>pre-push</strong>. Diesen könnte man gut verwenden, um einen lokalen Build mit anschließenden UnitTests durchzuführen. Das möchte ich ungern bei jedem Commit machen.</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.janbaer.de/tags/git/">git</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.janbaer.de/posts/2013-10-26-reisebericht-indien/" data-tooltip="Reisebericht Indien">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.janbaer.de/posts/2013-04-01-set-acl-with-powershell/" data-tooltip="Set-acl with Powershell">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.janbaer.de/posts/2013-09-01-using-hooks-in-git/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 Jan Baer. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.janbaer.de/posts/2013-10-26-reisebericht-indien/" data-tooltip="Reisebericht Indien">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.janbaer.de/posts/2013-04-01-set-acl-with-powershell/" data-tooltip="Set-acl with Powershell">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.janbaer.de/posts/2013-09-01-using-hooks-in-git/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwww.janbaer.de%2Fposts%2F2013-09-01-using-hooks-in-git%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.janbaer.de/images/avatar.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Jan Baer</h4>
+    
+      <div id="about-card-bio">I’m a passionated Softwaredeveloper from Munich.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Fullstack DevOp Javascript/Golang
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Germany
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://www.janbaer.de/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://www.janbaer.de/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+
+
+
+
+    
+  </body>
+</html>
+

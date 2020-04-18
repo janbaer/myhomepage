@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software on Homepage Jan Baer</title>
+    <link>https://www.janbaer.de/categories/software/</link>
+    <description>Recent content in software on Homepage Jan Baer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Nov 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.janbaer.de/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How can I protect my external USB stick with a password on MacOS Sierra</title>
+      <link>https://www.janbaer.de/posts/2016-11-05_howto_protect_usbstick_with_password_on_macos/</link>
+      <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2016-11-05_howto_protect_usbstick_with_password_on_macos/</guid>
+      <description>To protect your USB-stick with a password you have to format it first with the Disk Utility program to the Mac OS Extended (Journaled) format with the GUI-Partitiontable.
+Attention Please make a backup before you&amp;rsquo;re formatting it!!!
+Then just go into the terminal and enter diskutil list. Here should see the USB drive listed (in my case it&amp;rsquo;s /dev/disk2)
+In case you&amp;rsquo;ve only one partition on this USB stick you&amp;rsquo;ve to convert disk2s2 to a AppleCoreStorage with using you own passphrase.</description>
+    </item>
+    
+    <item>
+      <title>How to run a scheduled job within a Docker container</title>
+      <link>https://www.janbaer.de/posts/2016-10-23_howto_run_a_sheduled_job_within_a_docker_container/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2016-10-23_howto_run_a_sheduled_job_within_a_docker_container/</guid>
+      <description>For some reasons it could be necessary to execute a job in scheduled time. When running the job within a Docker container there&amp;rsquo;re two ways to do this.
+The first would be to create a cron job on the server on which Docker is running and let them execute the job with docker run.
+The second way would be to let do everything within the Docker container. But you don&amp;rsquo;t need to implement any scheduling functionality since it&amp;rsquo;s out of the box available from any Linux based container.</description>
+    </item>
+    
+    <item>
+      <title>Quicktip - Move windows between desktops on MacOSX</title>
+      <link>https://www.janbaer.de/posts/2015-10-17_quicktip_movewindowsbetweetendesktopsonmacosx/</link>
+      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/posts/2015-10-17_quicktip_movewindowsbetweetendesktopsonmacosx/</guid>
+      <description>To move windows, click and hold on any window titlebar and hit the shortcut you defined for the desktop (in my case it&amp;rsquo;s command+1,2,3) and the window will automatically moved to this dekstop.</description>
+    </item>
+    
+  </channel>
+</rss>
