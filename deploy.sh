@@ -2,6 +2,8 @@ VERSION=$(date -I)
 
 echo "Deploying new version ${VERSION} to gh-pages branch"
 
+hugo
+
 cd public
 
 git add -u && git add .
