@@ -18,9 +18,9 @@ canonifyurls = true
 [author]
   name = "Jan Baer"
   bio = "I’m a passionated Softwaredeveloper from Munich."
-  job = "Fullstack DevOp Javascript/Golang"
+  job = "Fullstack Softwaredeveloper Javascript/Golang"
   location = "Germany"
-  picture = "/images/avatar.jpg"
+  picture = "/images/me.jpg"
   twitter = "reabnaj"
   github = "janbaer"
 
@@ -30,25 +30,25 @@ canonifyurls = true
   identifier = "home"
   name = "Home"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\" title='Home'></i>"
-  url = "/posts"
+  url = "/"
 [[menu.main]]
   weight = 2
+  identifier = "posts"
+  name = "Blog"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-user\", title='Blog'></i>"
+  url = "/posts"
+[[menu.main]]
+  weight = 3
   identifier = "projects"
   name = "Projects"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-area-chart\" title='Projects'></i>"
   url = "/projects"
 [[menu.main]]
-  weight = 3
+  weight = 4
   identifier = "photography"
   name = "Photography"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-camera\", title='Photography'></i>"
   url = "/photography"
-[[menu.main]]
-  weight = 4
-  identifier = "about"
-  name = "About"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-user\", title='About'></i>"
-  url = "/about"
 [[menu.main]]
   weight = 5
   identifier = "tags"
@@ -90,7 +90,7 @@ canonifyurls = true
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "Hugo tranquilpeak theme demo"
+  description = "Homepage Jan Baer"
 
   # Customization
   # Define the behavior of the sidebar
