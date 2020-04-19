@@ -17,10 +17,17 @@
             object-fit: cover;
             flex-grow: 1;
         }
-
     </style>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.0/jquery.fancybox.min.css" />
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        $.fancybox.defaults.animationEffect = "tube";
+        $.fancybox.defaults.buttons = ["slideShow", "close"];
+      });
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.1/jquery.fancybox.min.css" />
 
     <div class="gallery">
         {{ $path := print "/static" (.Get "src") }}
@@ -29,7 +36,7 @@
             {{ $src := print $url "/" .Name }}
             {{ $name := print .Name }}
             <a data-fancybox="gallery" href="{{ $src }}" target="_blank">
-              <img src="{{ $src }}" title="{{ strings.TrimSuffix ".jpg" $name }}">  <br/>            
+              <img src="{{ $src }}" title="{{ strings.TrimSuffix ".jpg" $name }}">  <br/>
             </a>
         {{ end }}
     </div>
