@@ -30,31 +30,36 @@ canonifyurls = true
   identifier = "home"
   name = "Home"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\" title='Home'></i>"
-  url = "/"
+  url = "/home"
+
 [[menu.main]]
   weight = 2
   identifier = "posts"
   name = "Blog"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-user\", title='Blog'></i>"
   url = "/posts"
+
 [[menu.main]]
   weight = 3
   identifier = "projects"
   name = "Projects"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-area-chart\" title='Projects'></i>"
   url = "/projects"
+
 [[menu.main]]
   weight = 4
   identifier = "photography"
   name = "Photography"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-camera\", title='Photography'></i>"
   url = "/photography"
+
 [[menu.main]]
   weight = 5
   identifier = "tags"
   name = "Tags"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-file-text-o\" title='Tags'></i>"
   url = "/tags"
+
 [[menu.links]]
   weight = 1
   identifier = "github"

@@ -30,6 +30,11 @@ function updateMinWidth() {
   var w3 = getComputedStyle(sidebar).getPropertyValue("left");
   main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
 }
+function redirectToHome() {
+  if (window.location.pathname === '/') {
+    window.location = '/home';
+  }
+}
 </script>
 {{ if eq .Site.Params.syntaxHighlighter "highlight.js" }}
 <script>
@@ -41,6 +46,7 @@ $(document).ready(function() {
     }
     hljs.highlightBlock(block);
   });
+  redirectToHome();
 });
 </script>
 {{ end }}
