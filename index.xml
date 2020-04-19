@@ -6,183 +6,19 @@
     <description>Recent content on Homepage Jan Baer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.janbaer.de/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About me</title>
-      <link>https://www.janbaer.de/about/</link>
-      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Homepage Jan Baer</title>
+      <link>https://www.janbaer.de/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.janbaer.de/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Photography</title>
-      <link>https://www.janbaer.de/photography/</link>
-      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/photography/</guid>
-      <description>On this page I want to present a list of the best images I&amp;rsquo;ve taken since I restarted with my new hobby, the photography.
-Gallery  div.gallery { display: flex; flex-wrap: wrap; } div.gallery a { flex-grow: 1; object-fit: cover; margin: 2px; display: flex; } div.gallery a img { height: 200px; object-fit: cover; flex-grow: 1; }             </description>
-    </item>
-    
-    <item>
-      <title>MDWiki rewrite</title>
-      <link>https://www.janbaer.de/posts/2018-12-22-mdwiki_rewrite/</link>
-      <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2018-12-22-mdwiki_rewrite/</guid>
-      <description>As I wrote in my previous blog entry before a while I decided to give up the domains for my personal projects and let it run as subdomains under my personal domain janbaer.de.
-Before a while I realized, how easy it is to host a PWA on Github as a gh-page and thanks to Github and with the help of Let&amp;rsquo;s encrypt your PWA can also run over HTTPs which gives you more security but also the ability to use ServiceWorkers.</description>
-    </item>
-    
-    <item>
-      <title>Reject domains for personal projects</title>
-      <link>https://www.janbaer.de/posts/2017-10-07_reject_domains/</link>
-      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2017-10-07_reject_domains/</guid>
-      <description>Because of personal reasons I had to reject to both domain names I used for my personal projects mdwiki.net and howcani.eu. So from November this years, will no longer be reachable.
-But I&amp;rsquo;ll continue with the hosting for both projects as subdomains for the domain I use for my self since many years. So MDWiki will be reachable under mdwiki.janbaer.de and HowCanI will be hosted under howcani.janbaer.de.
-I&amp;rsquo;ll continue both projects as my personal projects, since I used it for myself for some years.</description>
-    </item>
-    
-    <item>
-      <title>My personal projects</title>
-      <link>https://www.janbaer.de/projects/</link>
-      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/projects/</guid>
-      <description>Introduction On this page I want to do some advertising for the projects I worked in the last years and that are still online and ready to use for everyone who is interested.
-But before I want to write some words about myself. I work now since more than 20 years as a passionate software developer for several companies and in this time I worked in a lot of software projects.</description>
-    </item>
-    
-    <item>
-      <title>My Projects</title>
-      <link>https://www.janbaer.de/posts/2017-04-01-my-projects/</link>
-      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2017-04-01-my-projects/</guid>
-      <description>I just wrote an article about my projects, but as a separate page and not as a normal blog post. You can read it here.</description>
-    </item>
-    
-    <item>
-      <title>How can I protect my external USB stick with a password on MacOS Sierra</title>
-      <link>https://www.janbaer.de/posts/2016-11-05_howto_protect_usbstick_with_password_on_macos/</link>
-      <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2016-11-05_howto_protect_usbstick_with_password_on_macos/</guid>
-      <description>To protect your USB-stick with a password you have to format it first with the Disk Utility program to the Mac OS Extended (Journaled) format with the GUI-Partitiontable.
-Attention Please make a backup before you&amp;rsquo;re formatting it!!!
-Then just go into the terminal and enter diskutil list. Here should see the USB drive listed (in my case it&amp;rsquo;s /dev/disk2)
-In case you&amp;rsquo;ve only one partition on this USB stick you&amp;rsquo;ve to convert disk2s2 to a AppleCoreStorage with using you own passphrase.</description>
-    </item>
-    
-    <item>
-      <title>How to run a scheduled job within a Docker container</title>
-      <link>https://www.janbaer.de/posts/2016-10-23_howto_run_a_sheduled_job_within_a_docker_container/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2016-10-23_howto_run_a_sheduled_job_within_a_docker_container/</guid>
-      <description>For some reasons it could be necessary to execute a job in scheduled time. When running the job within a Docker container there&amp;rsquo;re two ways to do this.
-The first would be to create a cron job on the server on which Docker is running and let them execute the job with docker run.
-The second way would be to let do everything within the Docker container. But you don&amp;rsquo;t need to implement any scheduling functionality since it&amp;rsquo;s out of the box available from any Linux based container.</description>
-    </item>
-    
-    <item>
-      <title>From C# to Python</title>
-      <link>https://www.janbaer.de/posts/2015-10-17-from-csharp-to-python/</link>
-      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2015-10-17-from-csharp-to-python/</guid>
-      <description>Last week I did my first steps with Python and I was really suprised about this programming language that has such a long history.
-It provides features that I wouldn&amp;rsquo;t expect. To dive deeper into the language I solved a Kata, what I mostly do when learning a new programming language. This time I choosen the StringCalculator kata from Roy Osherove. You can find the source code on my github page.</description>
-    </item>
-    
-    <item>
-      <title>Quicktip - Move windows between desktops on MacOSX</title>
-      <link>https://www.janbaer.de/posts/2015-10-17_quicktip_movewindowsbetweetendesktopsonmacosx/</link>
-      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2015-10-17_quicktip_movewindowsbetweetendesktopsonmacosx/</guid>
-      <description>To move windows, click and hold on any window titlebar and hit the shortcut you defined for the desktop (in my case it&amp;rsquo;s command+1,2,3) and the window will automatically moved to this dekstop.</description>
-    </item>
-    
-    <item>
-      <title>Find out which process uses my port</title>
-      <link>https://www.janbaer.de/posts/2013-12-08-find-out-which-process-uses-my-port/</link>
-      <pubDate>Sun, 08 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2013-12-08-find-out-which-process-uses-my-port/</guid>
-      <description>Today I had the problem, that someone has used the port 3000 on my macbook and I couldn&amp;rsquo;t start my node.js server. At first I tried to close all open terminal windows and exit the terminal app, but this wasn&amp;rsquo;t the solution for my problem.
-Now I&amp;rsquo;ve tried to find out wich process uses the port. For that I entered the following command in the terminal:
-lsof -i :3000 This command returns me informations about the process that is using my port.</description>
-    </item>
-    
-    <item>
-      <title>Reisebericht Dubai</title>
-      <link>https://www.janbaer.de/posts/2013-10-27-reisebericht-dubai/</link>
-      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2013-10-27-reisebericht-dubai/</guid>
-      <description>Gleich im Anschluss an unseren Urlaub in Indien machten wir einen Zwischenstop in Dubai, um auch diese Stadt kennenzulernen. Und was soll ich sagen, wo Dubai aufgrund der vielen positiven Eindrücke einfach ein Traum war, war Indien manchmal eher ein Albtraum für uns.
-Dubai ist eine Stadt, die mit vielen Superlativen glänzen kann. Wir haben zwei geführte Touren mitgemacht und unsere Tourguides haben wirklich sehr oft die Worte “Das höchste”, “Das größte”, “Das beste” usw.</description>
-    </item>
-    
-    <item>
-      <title>Reisebericht Indien</title>
-      <link>https://www.janbaer.de/posts/2013-10-26-reisebericht-indien/</link>
-      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2013-10-26-reisebericht-indien/</guid>
-      <description>Eigentlich wollte ich von meiner Reise nach Indien einen ausführlichen Reisebericht schreiben und habe das in meinem privaten Tagebuch auch jeden Tag gemacht.
-Da ich aber über die Zustände in Indien sehr enttäuscht und eigentlich auch schockiert war, möchte ich hier nur mein Fazit der Reise ziehen.
-Indien, oder besser Hindustan, ist ein Land mit einer langen Geschichte mit viel Tradition und mit für uns Europäer doch recht ungewöhnlich und teilweise befremdlichen Sitten und Gebräuche.</description>
-    </item>
-    
-    <item>
-      <title>Using hooks in git</title>
-      <link>https://www.janbaer.de/posts/2013-09-01-using-hooks-in-git/</link>
-      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2013-09-01-using-hooks-in-git/</guid>
-      <description>Wenn man nach &amp;ldquo;git hooks&amp;rdquo; sucht, findet man jede Menge Links zu guten Beschreibungen, was es für verschiedene Hooks in Git gibt und was man alles damit machen kann.
-Deshalb möchte ich mich in diesem Artikel darauf beschränken, zu beschreiben, wie ich den post-commit hook in einem meiner Projekte verwende.
-Ich habe für mich mit MarkDocein kleines Wiki erstellt das ich über die Github-Websites über wiki.janbaer.de erreiche. Dieses Wiki wird mit einfachen Textdateien im Markdown Format erstellt und über ein Python Script in HTML umgewandelt.</description>
-    </item>
-    
-    <item>
-      <title>Set-acl with Powershell</title>
-      <link>https://www.janbaer.de/posts/2013-04-01-set-acl-with-powershell/</link>
-      <pubDate>Mon, 01 Apr 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2013-04-01-set-acl-with-powershell/</guid>
-      <description>In meinem letzten Projekt war eine meiner Aufgaben, ein Script zu erstellen, das eine definierte Verzeichnisstruktur erstellt und einem bestimmten User die notwendigen Zugriffrechte darauf gibt. Weiterhin sollte das Script dann im IIS eine Website mit einem eigenen AppPool in diesem Verzeichnis erstellen.
-Ich hatte mich entschieden, das Script mit Powershell zu erstellen, da es hier schon fertige Module von Microsoft gibt, um den IIS zu verwalten, ohne das man dies über WMI machen müsste.</description>
-    </item>
-    
-    <item>
-      <title>LinqPerformanceTips</title>
-      <link>https://www.janbaer.de/posts/2013-03-04-linqperformancetips/</link>
-      <pubDate>Mon, 04 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2013-03-04-linqperformancetips/</guid>
-      <description>In my latest project I learned some thinks about the performance of Linq when you often query in-memory repositories. Linq is very easy to use and with that you can very quick implement the methods that you need for an repository. But sometimes it&amp;rsquo;s useful to think a little bit more how often a method will be called. In my latest project I had the situation to call the GetById method for more than 20.</description>
-    </item>
-    
-    <item>
-      <title>Csv to Json with Powershell</title>
-      <link>https://www.janbaer.de/posts/2013-02-26-csvtojsonwithpowershell/</link>
-      <pubDate>Tue, 26 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/posts/2013-02-26-csvtojsonwithpowershell/</guid>
-      <description>In my current project I have got some .csf files with the requirement to import these files to my project as base data to use it as inmemory repository.
-The best solution was these single line of code in powershell.
-Get-Content -path $inputFile | ConvertFrom-Csv -Delimiter &#39;;&#39; | ConvertTo-Json | Out-File $outputFile You can download the complete powershell script from my gist repository at github.</description>
+      <guid>https://www.janbaer.de/</guid>
+      <description>Welcome to my homepage. Here you can find some technical articles in my blog but also some of my photos.
+Some words about me, I&amp;rsquo;m a passionated Softwaredeveloper and a craftsman with experience of more than 25 years in the IT industry. I have a lot of knowledge about technologies from the past, but more I&amp;rsquo;m interested to constantly learn and improve my self with learning all the shiny new technologies, like JavaScript, Golang, Docker, and Kubernetes.</description>
     </item>
     
   </channel>

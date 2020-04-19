@@ -6,46 +6,9 @@
     <description>Recent content in Categories on Homepage Jan Baer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Nov 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.janbaer.de/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>software</title>
-      <link>https://www.janbaer.de/categories/software/</link>
-      <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/categories/software/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>develop</title>
-      <link>https://www.janbaer.de/categories/develop/</link>
-      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/categories/develop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>development</title>
-      <link>https://www.janbaer.de/categories/development/</link>
-      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/categories/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>photography</title>
-      <link>https://www.janbaer.de/categories/photography/</link>
-      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.janbaer.de/categories/photography/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
