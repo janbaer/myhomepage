@@ -69,8 +69,8 @@ In case you&rsquo;ve only one partition on this USB stick you&rsquo;ve to conver
 
 
 
-  <meta property="og:image" content="https://www.janbaer.de/images/avatar.jpg">
-  <meta property="twitter:image" content="https://www.janbaer.de/images/avatar.jpg">
+  <meta property="og:image" content="https://www.janbaer.de/images/me.jpg">
+  <meta property="twitter:image" content="https://www.janbaer.de/images/me.jpg">
 
 
     <title>How can I protect my external USB stick with a password on MacOS Sierra</title>
@@ -113,7 +113,7 @@ In case you&rsquo;ve only one partition on this USB stick you&rsquo;ve to conver
     
     
       
-        <img class="header-picture" src="https://www.janbaer.de/images/avatar.jpg" alt="Author&#39;s picture" />
+        <img class="header-picture" src="https://www.janbaer.de/images/me.jpg" alt="Author&#39;s picture" />
       
     
     </a>
@@ -125,7 +125,7 @@ In case you&rsquo;ve only one partition on this USB stick you&rsquo;ve to conver
     
       <div class="sidebar-profile">
         <a href="https://www.janbaer.de/#about">
-          <img class="sidebar-profile-picture" src="https://www.janbaer.de/images/avatar.jpg" alt="Author&#39;s picture" />
+          <img class="sidebar-profile-picture" src="https://www.janbaer.de/images/me.jpg" alt="Author&#39;s picture" />
         </a>
         <h4 class="sidebar-profile-name">Jan Baer</h4>
         
@@ -137,11 +137,21 @@ In case you&rsquo;ve only one partition on this USB stick you&rsquo;ve to conver
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.janbaer.de/posts">
+      <a class="sidebar-button-link " href="https://www.janbaer.de/home">
     
       <i class="sidebar-button-icon fa fa-lg fa-home" title='Home'></i>
       
       <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.janbaer.de/posts">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-user", title='Blog'></i>
+      
+      <span class="sidebar-button-desc">Blog</span>
     </a>
   </li>
 
@@ -162,16 +172,6 @@ In case you&rsquo;ve only one partition on this USB stick you&rsquo;ve to conver
       <i class="sidebar-button-icon fa fa-lg fa-camera", title='Photography'></i>
       
       <span class="sidebar-button-desc">Photography</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://www.janbaer.de/about">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-user", title='About'></i>
-      
-      <span class="sidebar-button-desc">About</span>
     </a>
   </li>
 
@@ -417,7 +417,7 @@ In case you&rsquo;ve only one partition on this USB stick you&rsquo;ve to conver
       <i class="fa fa-remove"></i>
     </div>
     
-      <img id="about-card-picture" src="https://www.janbaer.de/images/avatar.jpg" alt="Author&#39;s picture" />
+      <img id="about-card-picture" src="https://www.janbaer.de/images/me.jpg" alt="Author&#39;s picture" />
     
     <h4 id="about-card-name">Jan Baer</h4>
     
@@ -427,7 +427,7 @@ In case you&rsquo;ve only one partition on this USB stick you&rsquo;ve to conver
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        Fullstack DevOp Javascript/Golang
+        Fullstack Softwaredeveloper Javascript/Golang
       </div>
     
     
@@ -451,11 +451,11 @@ In case you&rsquo;ve only one partition on this USB stick you&rsquo;ve to conver
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
 
 <script src="https://www.janbaer.de/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
@@ -474,6 +474,11 @@ function updateMinWidth() {
   var w3 = getComputedStyle(sidebar).getPropertyValue("left");
   main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
 }
+function redirectToHome() {
+  if (window.location.pathname === '/') {
+    window.location = '/home';
+  }
+}
 </script>
 
 <script>
@@ -485,6 +490,7 @@ $(document).ready(function() {
     }
     hljs.highlightBlock(block);
   });
+  redirectToHome();
 });
 </script>
 
