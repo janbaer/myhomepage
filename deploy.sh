@@ -2,7 +2,7 @@ VERSION=$(date -I)
 
 echo "Deploying new version ${VERSION} to gh-pages branch"
 
-hugo
+hugo -v --cleanDestinationDir
 
 cd public
 
