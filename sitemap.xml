@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.janbaer.de/posts/2020-04-19_four_days_in_life_of_an_old_tree/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.janbaer.de/categories/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.janbaer.de/</loc>
     <lastmod>2020-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.janbaer.de/home/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.janbaer.de/tags/munich/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.janbaer.de/tags/photography/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.janbaer.de/categories/photography/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.janbaer.de/posts/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.janbaer.de/tags/</loc>
     <lastmod>2020-04-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -24,16 +59,6 @@
   
   <url>
     <loc>https://www.janbaer.de/posts/2018-12-22-mdwiki_rewrite/</loc>
-    <lastmod>2018-12-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.janbaer.de/posts/</loc>
-    <lastmod>2018-12-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.janbaer.de/tags/</loc>
     <lastmod>2018-12-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -55,11 +80,6 @@
   <url>
     <loc>https://www.janbaer.de/posts/2017-04-01-my-projects/</loc>
     <lastmod>2017-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.janbaer.de/categories/</loc>
-    <lastmod>2016-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -144,11 +164,6 @@
   
   <url>
     <loc>https://www.janbaer.de/tags/dubai/</loc>
-    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.janbaer.de/categories/photography/</loc>
     <lastmod>2013-10-27T00:00:00+00:00</lastmod>
   </url>
   

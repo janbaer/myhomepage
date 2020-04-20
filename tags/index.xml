@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Homepage Jan Baer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.janbaer.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Munich</title>
+      <link>https://www.janbaer.de/tags/munich/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/tags/munich/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photography</title>
+      <link>https://www.janbaer.de/tags/photography/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.janbaer.de/tags/photography/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>develop</title>
