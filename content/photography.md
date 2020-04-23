@@ -1,6 +1,6 @@
 ---
 title: "Photography"
-date: 2020-04-17
+date: 2020-04-23
 showTags: false
 showPagination: false
 showSocial: false
@@ -12,5 +12,5 @@ On this page I want to present a list of the best images I've taken since I rest
 
 ## Gallery
 
- {{< foldergallery src="/images/photography" >}}
+{{<flickrgallery >}}
 
