@@ -18,7 +18,7 @@
       
       <guid>https://www.janbaer.de/photography/</guid>
       <description>On this page I want to present a list of the best images I&amp;rsquo;ve taken since I restarted with my new hobby, the photography.
-Gallery  div.gallery { display: flex; flex-wrap: wrap; } div.gallery a { flex-grow: 1; object-fit: cover; margin: 2px; display: flex; } div.gallery a img { height: 200px; object-fit: cover; flex-grow: 1; }   window.addEventListener(&#39;DOMContentLoaded&#39;, function() { $.fancybox.defaults.animationEffect = &#34;tube&#34;; $.fancybox.defaults.buttons = [&#34;slideShow&#34;, &#34;close&#34;]; });  import { createGallery } from &#39;/scripts/flickr.</description>
+Gallery  div.gallery { display: flex; flex-wrap: wrap; } div.gallery a { flex-grow: 1; object-fit: cover; margin: 2px; display: flex; max-width: 49%; } div.gallery a img { height: 200px; object-fit: cover; flex-grow: 1; }   window.addEventListener(&#39;DOMContentLoaded&#39;, function() { $.fancybox.defaults.animationEffect = &#34;tube&#34;; $.fancybox.defaults.buttons = [&#34;slideShow&#34;, &#34;close&#34;]; });  import { createGallery } from &#39;/scripts/flickr.</description>
     </item>
     
     <item>
