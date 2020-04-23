@@ -17,9 +17,11 @@ async function appendElements(rootElement, apiKey, userId) {
   const images = await loadImages(apiKey, userId);
 
   for (const { imageUrl, thumbnailUrl, title, datetaken } of images) {
-    const divElement =  document.createElement('div');
-    divElement.innerHTML = `<a data-fancybox="gallery" href="${imageUrl}"><img src="${thumbnailUrl}" title="${title} (${datetaken})"></a>`;
-    rootElement.appendChild(divElement);
+    const linkElement =  document.createElement('a');
+    linkElement.setAttribute('data-fancybox', 'gallery');
+    linkElement.setAttribute('href', imageUrl);
+    linkElement.innerHTML = `<img src="${thumbnailUrl}" title="${title} (${datetaken})">`;
+    rootElement.appendChild(linkElement);
   }
 }
 
